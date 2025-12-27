@@ -1,0 +1,1157 @@
+{
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/2106fc/Proyecto_ColabISA/blob/main/3er%20Dia%20Completo\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "# Dia 3\n",
+        "\n",
+        "## Temario\n",
+        "\n",
+        "- Listas\n",
+        "- Tuplas\n",
+        "- Sets\n",
+        "- Diccionarios\n"
+      ],
+      "metadata": {
+        "id": "tgExgEcA58wq"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "# Estructura de Datos\n",
+        "\n",
+        "Las estructuras de datos osn formas de organizar la informacion para trabajar con ellas de manera eficiente\n",
+        "\n",
+        "- Listas => Ordenadas, modificadas, permiten duplicados\n",
+        "- Tuplas => Ordenadas, inmutables y permiten duplicados\n",
+        "- Sets => No ordenados, sin duplicados\n",
+        "_ Diccionarios => pares clave-valor\n",
+        "\n",
+        "nota:\n",
+        "\n",
+        "- Pilas (FILO -> First in, Last out)\n",
+        "- Colas (FIFO, First in, First out)\n",
+        "- Listas Enlazadas (o doblemente enlazadas)"
+      ],
+      "metadata": {
+        "id": "xE0U89Gz-mb-"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "## Listas\n",
+        "\n",
+        "Las listas son colecciones ordenadas que podemos modificar y almacenar elementos de distintos tipos de datos"
+      ],
+      "metadata": {
+        "id": "TrtYbfrkAKDM"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "listas_de_compras = [\"manzanas\",\"pan\",\"leche\",\"huevos\",\"mantequilla\",\"queso\",\"jamon\"]\n",
+        "print(listas_de_compras)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "Bm4v06NKAV5e",
+        "outputId": "49bfe9c3-d9b2-4442-916c-bcb882074b71"
+      },
+      "execution_count": 100,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "['manzanas', 'pan', 'leche', 'huevos', 'mantequilla', 'queso', 'jamon']\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "print(listas_de_compras[2])"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "A7moNjT1Aw_C",
+        "outputId": "d6960968-a930-4696-fefd-87a9c3e6cb2f"
+      },
+      "execution_count": 101,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "leche\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Agregar un elemento a la lista .append()\n",
+        "listas_de_compras.append(\"arroz\")\n",
+        "listas_de_compras"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "gowqAmNeMvkk",
+        "outputId": "c1d86c28-8221-4222-f495-70eef029917b"
+      },
+      "execution_count": 102,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "['manzanas',\n",
+              " 'pan',\n",
+              " 'leche',\n",
+              " 'huevos',\n",
+              " 'mantequilla',\n",
+              " 'queso',\n",
+              " 'jamon',\n",
+              " 'arroz']"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 102
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Agregar un elemento en una posicion especifica\n",
+        "listas_de_compras.insert(1,\"platano\")\n",
+        "listas_de_compras\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "3d3zvM_zM8dG",
+        "outputId": "3675600b-051f-4b4d-bb92-338da85e8c09"
+      },
+      "execution_count": 103,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "['manzanas',\n",
+              " 'platano',\n",
+              " 'pan',\n",
+              " 'leche',\n",
+              " 'huevos',\n",
+              " 'mantequilla',\n",
+              " 'queso',\n",
+              " 'jamon',\n",
+              " 'arroz']"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 103
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "print(listas_de_compras)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "GBjakIo8NAbu",
+        "outputId": "d3948201-9f3e-44ec-a012-9b0b49bd6073"
+      },
+      "execution_count": 104,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "['manzanas', 'platano', 'pan', 'leche', 'huevos', 'mantequilla', 'queso', 'jamon', 'arroz']\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Para eliminar un elemento de una lista existe el remove y el pop\n",
+        "listas_de_compras.remove(\"azucar\")\n",
+        "print(listas_de_compras)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 238
+        },
+        "collapsed": true,
+        "id": "2zQLm_XjNY95",
+        "outputId": "399347f6-1e46-4a2d-eb31-e458d234ac2c"
+      },
+      "execution_count": 105,
+      "outputs": [
+        {
+          "output_type": "error",
+          "ename": "ValueError",
+          "evalue": "list.remove(x): x not in list",
+          "traceback": [
+            "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+            "\u001b[0;31mValueError\u001b[0m                                Traceback (most recent call last)",
+            "\u001b[0;32m/tmp/ipython-input-3463685984.py\u001b[0m in \u001b[0;36m<cell line: 0>\u001b[0;34m()\u001b[0m\n\u001b[1;32m      1\u001b[0m \u001b[0;31m# Para eliminar un elemento de una lista existe el remove y el pop\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m----> 2\u001b[0;31m \u001b[0mlistas_de_compras\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mremove\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34m\"azucar\"\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m\u001b[1;32m      3\u001b[0m \u001b[0mprint\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mlistas_de_compras\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n",
+            "\u001b[0;31mValueError\u001b[0m: list.remove(x): x not in list"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "listas_de_compras.pop() #Sin nada dentro del parentesis elimina el ultimo elemento\n",
+        "listas_de_compras.pop(7) #o puedes agarrar la pocision que quieras (pero iniciando desde 0)\n",
+        "# Nota: te retorna el numero eliminado"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 36
+        },
+        "collapsed": true,
+        "id": "MLtGMQHWOY0e",
+        "outputId": "5540def8-f073-416b-c578-6b5fcde87c6d"
+      },
+      "execution_count": 106,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "'jamon'"
+            ],
+            "application/vnd.google.colaboratory.intrinsic+json": {
+              "type": "string"
+            }
+          },
+          "metadata": {},
+          "execution_count": 106
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Podemor recorrer el arreglo por medio de un for\n",
+        "for elementos in listas_de_compras:\n",
+        "    print(elementos)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "7zcjGQtuPG1G",
+        "outputId": "8bdc9b1a-e3c7-4a74-ef6c-06ff9879a608"
+      },
+      "execution_count": 110,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "manzanas\n",
+            "platano\n",
+            "pan\n",
+            "leche\n",
+            "huevos\n",
+            "mantequilla\n",
+            "queso\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# len() saca el tamaño de la lista\n",
+        "print(len(listas_de_compras))\n",
+        "for i in range (len(listas_de_compras)):\n",
+        "  print(f\"{i+1}-{listas_de_compras_list[i]}\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "HbX5Qln7P1Y_",
+        "outputId": "64e04592-2fe0-4416-8bfe-f9b8c0c97455"
+      },
+      "execution_count": 115,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "7\n",
+            "1-manzanas\n",
+            "2-pan\n",
+            "3-leche\n",
+            "4-huevos\n",
+            "5-mantequilla\n",
+            "6-queso\n",
+            "7-jamon\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "promedios = [55.6,38.6,89.3,38.6,100,35,9]\n",
+        "print(promedios)\n",
+        "promedios.sort() #Ordena valores de manera ascendente\n",
+        "print(promedios)\n",
+        "#Ordenar una lista de mandera descendente\n",
+        "promedios.sort(reverse=True)\n",
+        "print(promedios)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "hE7hC5lxWjaJ",
+        "outputId": "de6b5d1f-4d55-4488-a287-71fb1a220f5c"
+      },
+      "execution_count": 119,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[55.6, 38.6, 89.3, 38.6, 100, 35, 9]\n",
+            "[9, 35, 38.6, 38.6, 55.6, 89.3, 100]\n",
+            "[100, 89.3, 55.6, 38.6, 38.6, 35, 9]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Podemos ingresar al ultimo elemento de una lista\n",
+        "print(promedios[-1])"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "2K26b_DEXZ3P",
+        "outputId": "e2d2546e-e1b1-484f-e9ea-a6a8fb54673e"
+      },
+      "execution_count": 121,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "9\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Encontrar el mayor y menor de una lista\n",
+        "print(max(promedios))\n",
+        "print(min(promedios))"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "v1nXtq-6YAGO",
+        "outputId": "ba07b5b9-517d-4bf5-d50d-1d59fc4fdbd1"
+      },
+      "execution_count": 125,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "100\n",
+            "9\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Declaración y uso de matrices\n",
+        "calificaciones = [[100,83,96],[78,56,99]]\n",
+        "i = 1\n",
+        "for cali_i in calificaciones:\n",
+        "  print(f\"/nAlumno {i}\")\n",
+        "  j = 1\n",
+        "  for cali_j in cali_i:\n",
+        "    print(f\" Cali {j}:{cali_j}\")\n",
+        "    j += 1\n",
+        "  j=0\n",
+        "  i += 1"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "gjbMMYqcZBIT",
+        "outputId": "9c97fa25-6528-4677-ec7b-4ef524597375"
+      },
+      "execution_count": 131,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "/nAlumno 1\n",
+            " Cali 1:100\n",
+            " Cali 2:83\n",
+            " Cali 3:96\n",
+            "/nAlumno 2\n",
+            " Cali 1:78\n",
+            " Cali 2:56\n",
+            " Cali 3:99\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "## Tuplas\n",
+        "Colecciones ordenadas pero inmutables.\n",
+        "- pueden ser coordenadas o edad de una persona que no se puede editar"
+      ],
+      "metadata": {
+        "id": "wA6edeubnm4S"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Hagamos un programa donde guardemos fechas de nacimientos de un grupo en una tupla\n",
+        "fechas = (\"21/06/2003\",\"14/03/2002\",\"09/04/1965\")\n",
+        "(type(fechas))\n",
+        "fechas"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "J3lC2HtUnVsC",
+        "outputId": "ae95e96e-b455-4c92-d9be-d0dcf0cad87a"
+      },
+      "execution_count": 170,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "('21/06/2003', '14/03/2002', '09/04/1965')"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 170
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# ES INMUTABLE\n",
+        "fechas.append(\"21/06/2003\") #TE VA A MARCAR ERROR"
+      ],
+      "metadata": {
+        "collapsed": true,
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 220
+        },
+        "id": "N2XC98S1sPUc",
+        "outputId": "1676eacc-11e2-4a3f-c824-b1f821069a22"
+      },
+      "execution_count": 133,
+      "outputs": [
+        {
+          "output_type": "error",
+          "ename": "AttributeError",
+          "evalue": "'tuple' object has no attribute 'append'",
+          "traceback": [
+            "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+            "\u001b[0;31mAttributeError\u001b[0m                            Traceback (most recent call last)",
+            "\u001b[0;32m/tmp/ipython-input-3231608667.py\u001b[0m in \u001b[0;36m<cell line: 0>\u001b[0;34m()\u001b[0m\n\u001b[1;32m      1\u001b[0m \u001b[0;31m# ES INMUTABLE\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m----> 2\u001b[0;31m \u001b[0mfechas\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mappend\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34m\"21/06/2003\"\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m",
+            "\u001b[0;31mAttributeError\u001b[0m: 'tuple' object has no attribute 'append'"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "fecha_lista = list(fechas) # Aqui ya puedes usar los comandos basicos para una lista\n"
+      ],
+      "metadata": {
+        "id": "8RPVsI7rsZ_k"
+      },
+      "execution_count": 135,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "## SETS\n",
+        "Los sets son colecciones sin orden y que no permiten elementos duplicados"
+      ],
+      "metadata": {
+        "id": "fOm9hQWztOpX"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "nombre = {\"Isa\", \"Andres\", \"Rubi\",\"Rubi\"}\n",
+        "print(nombre)\n",
+        "print(type(nombre))"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "c9KNIwumtDRp",
+        "outputId": "9a060878-af01-430b-fefc-d55d26e9f2e4"
+      },
+      "execution_count": 139,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "{'Rubi', 'Andres', 'Isa'}\n",
+            "<class 'set'>\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "distintos_datos = {\"Isa\", 1, \"Andres\", \"Rubi\",\"Rubi\", 4.8}\n",
+        "distintos_datos"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "NZYVP_LG0VI0",
+        "outputId": "bb097f75-f407-42e0-fb3e-9b306903d846"
+      },
+      "execution_count": 141,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "{1, 4.8, 'Andres', 'Isa', 'Rubi'}"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 141
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "## Add\n",
+        "nombre.add(\"Manuel\")\n",
+        "nombre"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "bAVWNZMv1RLi",
+        "outputId": "bf2b5d38-96d2-45d1-94ed-591a96748d79"
+      },
+      "execution_count": 144,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "{'Andres', 'Isa', 'Manuel', 'Noemi', 'Rubi'}"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 144
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "print(nombre[2])"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 147
+        },
+        "id": "6bj2EsBV3XSR",
+        "outputId": "03959eba-4eef-496d-97e6-6d14f7870c61"
+      },
+      "execution_count": 145,
+      "outputs": [
+        {
+          "output_type": "error",
+          "ename": "TypeError",
+          "evalue": "'set' object is not subscriptable",
+          "traceback": [
+            "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+            "\u001b[0;31mTypeError\u001b[0m                                 Traceback (most recent call last)",
+            "\u001b[0;32m/tmp/ipython-input-1064476624.py\u001b[0m in \u001b[0;36m<cell line: 0>\u001b[0;34m()\u001b[0m\n\u001b[0;32m----> 1\u001b[0;31m \u001b[0mprint\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mnombre\u001b[0m\u001b[0;34m[\u001b[0m\u001b[0;36m2\u001b[0m\u001b[0;34m]\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m",
+            "\u001b[0;31mTypeError\u001b[0m: 'set' object is not subscriptable"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "nombre[2]=\"Axel\""
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 147
+        },
+        "id": "nmkGILgP3rHz",
+        "outputId": "714c571f-4d86-46fb-adfb-b35543a57245"
+      },
+      "execution_count": 146,
+      "outputs": [
+        {
+          "output_type": "error",
+          "ename": "TypeError",
+          "evalue": "'set' object does not support item assignment",
+          "traceback": [
+            "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+            "\u001b[0;31mTypeError\u001b[0m                                 Traceback (most recent call last)",
+            "\u001b[0;32m/tmp/ipython-input-1443591845.py\u001b[0m in \u001b[0;36m<cell line: 0>\u001b[0;34m()\u001b[0m\n\u001b[0;32m----> 1\u001b[0;31m \u001b[0mnombre\u001b[0m\u001b[0;34m[\u001b[0m\u001b[0;36m2\u001b[0m\u001b[0;34m]\u001b[0m\u001b[0;34m=\u001b[0m\u001b[0;34m\"Axel\"\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m",
+            "\u001b[0;31mTypeError\u001b[0m: 'set' object does not support item assignment"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "##UNION\n",
+        "ca = {45,23,87,69,14,48,96}\n",
+        "al = {77,85,87,69,41}\n",
+        "#Union con .union()\n",
+        "ca_al = ca.union(al)\n",
+        "ca_al\n",
+        "#Union usando |\n",
+        "ca_al = ca | al\n",
+        "ca_al"
+      ],
+      "metadata": {
+        "id": "idq4RKDBDs9Z",
+        "outputId": "d2f90a40-4267-42a8-c923-9b379e03b201",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "execution_count": 171,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "{14, 23, 41, 45, 48, 69, 77, 85, 87, 96}"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 171
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "##INTERSECCION\n",
+        "ca = {45,23,87,69,14,48,96}\n",
+        "al = {77,85,87,69,41}\n",
+        "#intersección con .intersection()\n",
+        "ca_al = ca.intersection(al)\n",
+        "ca_al\n",
+        "#intersección usando &\n",
+        "ca_al = ca & al\n",
+        "ca_al"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "mz8-1STP9t9-",
+        "outputId": "623ae34e-ad47-4edc-8f1e-b95b44f0822b"
+      },
+      "execution_count": 169,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "{69, 87}"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 169
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Diferencia\n",
+        "solo_calculo = ca.difference(al)\n",
+        "solo_calculo\n",
+        "\n",
+        "# Diferencia usando -\n",
+        "solo_calculo = ca - al\n",
+        "solo_calculo"
+      ],
+      "metadata": {
+        "id": "7HdpvYyADcf_",
+        "outputId": "b1217035-4497-418d-c699-bc9f78674262",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "execution_count": 174,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "{14, 23, 45, 48, 96}"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 174
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "nombre = {\"Isa\", \"Andres\", \"Rubi\",\"Rubi\"}\n",
+        "#remove, pop\n",
+        "nombre.remove(\"Isa\") #puedes eliminar a quien tu quieras\n",
+        "nombre\n",
+        "nombre.pop() #Elimina un elemento de manera aleatoria\n",
+        "nombre"
+      ],
+      "metadata": {
+        "id": "AR-he6jhGqNj",
+        "outputId": "8678b10b-8e51-44d6-9aa7-52b48135936b",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "execution_count": 182,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "{'Andres'}"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 182
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Elimincar todo el SET\n",
+        "nombre.clear()\n",
+        "nombre"
+      ],
+      "metadata": {
+        "id": "uszPQcQ-HEVH",
+        "outputId": "d65791db-973a-4987-a8d9-1fecff880838",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "execution_count": 183,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "set()"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 183
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "## DICCIONARIOS\n",
+        "Los diccionarios son colecciones no ordenadas de pares clave:valor"
+      ],
+      "metadata": {
+        "id": "tmQKtzmyIjPO"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "alumno = {\n",
+        "    #clave     #valor\n",
+        "    \"nombre\":\"Isa Corrales\",\n",
+        "    \"edad\":22,\n",
+        "    \"carrera\":\"AdministracionEmpresas\",\n",
+        "    \"semestre\":8,\n",
+        "    \"promedio\":8.65,\n",
+        "    \"calificaciones\":{10,9.65,8,10}\n",
+        "}\n",
+        "(type(alumno))\n",
+        "alumno"
+      ],
+      "metadata": {
+        "collapsed": true,
+        "id": "LayDtoIKHrWo",
+        "outputId": "27c730bc-5901-4d41-a357-c1c5b19201c0",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "execution_count": 250,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "{'nombre': 'Isa Corrales',\n",
+              " 'edad': 22,\n",
+              " 'carrera': 'AdministracionEmpresas',\n",
+              " 'semestre': 8,\n",
+              " 'promedio': 8.65,\n",
+              " 'calificaciones': {8, 9.65, 10}}"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 250
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "(\"La alumna \", alumno[\"nombre\"],\"esta estudiando\", alumno[\"carrera\"], \"se encuentra cursando el semestre numero\", alumno[\"semestre\"], \"tiene un promedio de\", alumno[\"promedio\"])"
+      ],
+      "metadata": {
+        "id": "LMK33JTXJKjT",
+        "outputId": "d2a568c7-8c4a-42cd-b5e3-70d0ff985af3",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "execution_count": 251,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "('La alumna ',\n",
+              " 'Isa Corrales',\n",
+              " 'esta estudiando',\n",
+              " 'AdministracionEmpresas',\n",
+              " 'se encuentra cursando el semestre numero',\n",
+              " 8,\n",
+              " 'tiene un promedio de',\n",
+              " 8.65)"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 251
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Agregar al diccionario\n",
+        "alumno[\"area preferida\"] =\"Ciencia de Datos\"\n",
+        "alumno"
+      ],
+      "metadata": {
+        "id": "Gzc5S0ytLIjy",
+        "outputId": "7275d525-e1e4-4240-d8d2-6cda579602a7",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "execution_count": 252,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "{'nombre': 'Isa Corrales',\n",
+              " 'edad': 22,\n",
+              " 'carrera': 'AdministracionEmpresas',\n",
+              " 'semestre': 8,\n",
+              " 'promedio': 8.65,\n",
+              " 'calificaciones': {8, 9.65, 10},\n",
+              " 'area preferida': 'Ciencia de Datos'}"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 252
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "for valor in alumno:\n",
+        "  (alumno[valor])"
+      ],
+      "metadata": {
+        "id": "8qqAycKfLcw1"
+      },
+      "execution_count": 253,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "for clave, valor in alumno.items():\n",
+        "  #devuelve una vista de todos los pares clave:valor del diccionario\n",
+        "  (clave,\": \", valor)"
+      ],
+      "metadata": {
+        "id": "8YnsojZ8MPkJ"
+      },
+      "execution_count": 254,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# El metodo .clear() tambien usar aqui.\n",
+        "# Tenemos el .get que nos ayuda a obtener el valor (value) de cierta clave (key)\n",
+        "(alumno.get(\"nombre\"))"
+      ],
+      "metadata": {
+        "id": "3uxw6dCsM5sY",
+        "outputId": "005b00ca-5443-4f51-e4a8-48e4556f4499",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 36
+        }
+      },
+      "execution_count": 255,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "'Isa Corrales'"
+            ],
+            "application/vnd.google.colaboratory.intrinsic+json": {
+              "type": "string"
+            }
+          },
+          "metadata": {},
+          "execution_count": 255
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "alumno_1 = alumno.items()\n",
+        "(alumno_1)\n",
+        "(type(alumno_1))\n",
+        "alumno_lista = list(alumno_1)\n",
+        "alumno_lista"
+      ],
+      "metadata": {
+        "id": "O69zy9QONckW",
+        "outputId": "e4620a5b-4224-4f93-a4ae-1e80ead6c38b",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "execution_count": 256,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "[('nombre', 'Isa Corrales'),\n",
+              " ('edad', 22),\n",
+              " ('carrera', 'AdministracionEmpresas'),\n",
+              " ('semestre', 8),\n",
+              " ('promedio', 8.65),\n",
+              " ('calificaciones', {8, 9.65, 10}),\n",
+              " ('area preferida', 'Ciencia de Datos')]"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 256
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# El metodo .values() sirve para obtener los valores del diccionario, tambien se puede usar en la interacción\n",
+        "alumno_v = alumno.values()\n",
+        "(type(alumno_v))\n",
+        "alumno_v"
+      ],
+      "metadata": {
+        "id": "Bsyxge0iNraI",
+        "outputId": "3fc39c1b-dc47-4e97-cdc3-1bc2b145670f",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "execution_count": 257,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "dict_values(['Isa Corrales', 22, 'AdministracionEmpresas', 8, 8.65, {8, 9.65, 10}, 'Ciencia de Datos'])"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 257
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "if \"carrera\" in alumno_1:\n",
+        "  (\"Existe carrera\")\n",
+        "else:\n",
+        "  (\"No existe carrera\")\n",
+        "\n",
+        "if(\"dinero\") in alumno_1:\n",
+        "  (\"Alumno tiene dinero\")\n",
+        "else:\n",
+        "  (\"Alumno no tiene dinero\")"
+      ],
+      "metadata": {
+        "id": "t__3qePJOXme"
+      },
+      "execution_count": 264,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# .copy puedes copiar todo el diccionario en una nueva variable\n",
+        "# update -> sirve para cambiar los values (valores) (.update)\n",
+        "alumno.update({\"semestre\":\"5\"})\n",
+        "alumno"
+      ],
+      "metadata": {
+        "id": "_B6OetExO1Oj",
+        "outputId": "3a931c88-6763-43e6-aaec-4f9ac2fc916d",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "execution_count": 265,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "{'nombre': 'Isa Corrales',\n",
+              " 'edad': 22,\n",
+              " 'carrera': 'AdministracionEmpresas',\n",
+              " 'semestre': '5',\n",
+              " 'promedio': 8.65,\n",
+              " 'calificaciones': {8, 9.65, 10},\n",
+              " 'area preferida': 'Ciencia de Datos'}"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 265
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [],
+      "metadata": {
+        "id": "WRuHoperQp-c"
+      },
+      "execution_count": null,
+      "outputs": []
+    }
+  ],
+  "metadata": {
+    "colab": {
+      "name": "Te damos la bienvenida a Colaboratory",
+      "provenance": [],
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "display_name": "Python 3",
+      "name": "python3"
+    }
+  },
+  "nbformat": 4,
+  "nbformat_minor": 0
+}
